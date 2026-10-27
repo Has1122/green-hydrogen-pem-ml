@@ -1,6 +1,8 @@
 # Files the notebooks write when re-run (saved models, intermediate CSVs, high-res figures)
 notebooks/*
 !notebooks/*.ipynb
+scripts/*
+!scripts/*.py
 *.joblib
 
 .ipynb_checkpoints/

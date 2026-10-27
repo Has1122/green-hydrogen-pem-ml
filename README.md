@@ -96,6 +96,8 @@ Production follows the wind closely. It peaks in **March and August**, dips to i
 │   ├── 03_numerical_model_partial_dependence.ipynb
 │   ├── 04_bayesian_optimisation.ipynb      # optimal operating conditions (scikit-optimize)
 │   └── 05_hydrogen_production_forecast.ipynb
+├── scripts/
+│   └── hydrogen_production_simulation.py # wind-to-hydrogen simulation → results/
 ├── results/
 │   └── hydrogen_result.csv               # simulated H₂ (ml) per 10-min interval
 ├── figures/                              # figures used in this README
@@ -115,7 +117,7 @@ jupyter lab
 
 - Open the notebooks from inside `notebooks/`. Data paths are relative to that folder.
 - Run `03` before `04`: the Bayesian optimisation loads the model and scaler that `03` saves.
-- The wind simulation loop in `05` is commented out because it is slow. Its output is provided in `results/hydrogen_result.csv`.
+- The wind simulation runs in [`scripts/hydrogen_production_simulation.py`](scripts/hydrogen_production_simulation.py). Run it from inside `scripts/`; it takes a while, since it makes one model prediction per 10-minute interval. Its output, `results/hydrogen_result.csv`, is already included, and notebook `05` reads it for the analysis and plots.
 - The project was originally run on Python 3.8 (2024).
 
 ## Data sources
