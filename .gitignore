@@ -1,0 +1,11 @@
+# Files the notebooks write when re-run (saved models, intermediate CSVs, high-res figures)
+notebooks/*
+!notebooks/*.ipynb
+*.joblib
+
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+Thumbs.db
+desktop.ini
+.DS_Store
